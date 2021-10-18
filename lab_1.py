@@ -3,6 +3,33 @@ import matplotlib as mpl
 import numpy as np
 print("hey")
 
-x = np.linspace(0, 20, 100)
-plt.plot(x, np.sin(x))
-plt.show()
+zero = np.matrix([
+0,1,1,1,0,
+1,0,0,0,1,
+1,0,0,0,1,
+1,0,0,0,1,
+1,0,0,0,1,
+0,1,1,1,0
+])
+
+one=np.matrix([
+0,1,1,0,0,
+0,0,1,0,0,
+0,0,1,0,0,
+0,0,1,0,0,
+0,0,1,0,0,
+0,0,1,0,0
+])
+
+two=np.matrix([
+1,1,1,0,0,
+0,0,0,1,0,
+0,0,0,1,0,
+0,1,1,0,0,
+1,0,0,0,0,
+1,1,1,1,1,
+])
+
+
+test_ar = np.random.randint(2, size=(5, 6))
+print(test_ar)
