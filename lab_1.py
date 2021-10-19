@@ -87,18 +87,15 @@ w_matrix = 1/3 * (tens0 + tens1 + tens2) - diag_matrix
 energy = np.zeros(diag_matrix.shape)
 
 for t in range(time_step):
-    a = np.sum(np.dot(w_matrix, noisy0_copy)) * noisy0_copy
+    a = np.sum(np.dot(w_matrix, noisy0_copy), axis=0) * noisy0_copy
     energy += -1/2 * a 
-    #energy = np.where(a < 0, energy, 1)
+    #  energy = np.where(a < 0, energy, 1)
     a_where_lower = np.where(a < 0)
     noisy0_copy[a_where_lower] = 1
 
-print(a)
-#print(noisy0)
-print("_________________________")
-#print(noisy0_copy)
-#print(energy)
-#
+
+
+
 
 
 
